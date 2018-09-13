@@ -5,6 +5,7 @@
 body {
     background: url(../images/bg-matrix.jpg);
     padding: 0px 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 button {
