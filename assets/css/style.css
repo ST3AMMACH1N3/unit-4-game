@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/bg-matrix.jpg);
+    padding: 0px 20px;
+}
+
+button {
+    display: block;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    width: 480px;
+    font-size: 32px;
+    line-height: 2em;
+    margin: 25px auto;
+    background: #000000aa;
+    color: #5acf5a;
+    border: 1px solid #5acf5a;
+}
+
+h2 {
+    background: #000000aa;
+    border: 1px solid #5acf5a;
+    font-size: 24px;
+    color: #5acf5a;
+    padding: 10px;
+    display: inline-block;
+    margin: 5px auto 5px 0px;
+}
+
+h3 {
+    font-size: 16px;
+    color: #5acf5a;
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+#console {
+    display: none;
+    font-size: 16px;
+    color: #5acf5a;
+    margin: 5px auto 5px 0px;
+    background: #000000aa;
+    padding: 5px;
+}
+
+#restart-btn {
+    display: none;
+}
+
+.clear-fix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.character {
+    width: 25%;
+    max-width: 200px;
+    text-align: center;
+    float: left;
+    padding: 5px;
+    border: 1px solid #5acf5a;
+}
+
+.unselected {
+    background: #888888;
+}
+
+.hero {
+    background: #ffffff;
+}
+
+.enemy {
+    background: #000000;
+}

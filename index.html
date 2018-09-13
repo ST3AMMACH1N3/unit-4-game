@@ -16,44 +16,43 @@
     <body>
         <h1>Matrix RPG</h1>
 
-        <div id="char-choice">
-            <div id="neo" class="unselected">
+        <div id="char-choice" class="clear-fix">
+            <div id="neo" class="unselected character">
                 <h3 class="name">Neo</h3>
-                <img src="assets/images/neo.jpg" alt="Pictore of Neo" class="char-image">
-                <h3 class="hp"></h3>
+                <img src="assets/images/neo.jpg" alt="Picture of Neo" class="char-image">
+                <h3 class="hp">100</h3>
             </div>
-            <div id="trinity" class="unselected">
+            <div id="trinity" class="unselected character">
                 <h3 class="name">Trinity</h3>
                 <img src="assets/images/trinity.jpg" alt="Picture of Trinity" class="char-image">
-                <h3 class="hp"></h3>
+                <h3 class="hp">125</h3>
             </div>
-            <div id="morpheus" class="unselected">
+            <div id="morpheus" class="unselected character">
                 <h3 class="name">Morpheus</h3>
                 <img src="assets/images/morpheus.jpg" alt="Picture of Morpheus" class="char-image">
-                <h3 class="hp"></h3>
+                <h3 class="hp">150</h3>
             </div>
-            <div id="mr-smith" class="unselected">
+            <div id="mr-smith" class="unselected character">
                 <h3 class="name">Mr. Smith</h3>
                 <img src="assets/images/mrsmith.jpg" alt="Picture of Mr. Smith" class="char-image">
-                <h3 class="hp"></h3>
+                <h3 class="hp">175</h3>
             </div>
         </div>
 
         <h2>Your Character</h2>
-        <div id="player-char"></div>
+        <div id="player-char" class="clear-fix"></div>
 
         <h2>Enemies Available To Attack</h2>
-        <div id="available-enemies"></div>
+        <div id="available-enemies" class="clear-fix"></div>
 
         <h2>Fight Section</h2>
-        <button id="attack-btn">Attack</button>
+        <button type="button" class="attack-btn">Attack</button>
 
         <h2>Defender</h2>
-        <div id="defending-char"></div>
+        <div id="defending-char" class="clear-fix"></div>
 
-        <p id="player-console"></p>
-        <p id="enemy-console"></p>
+        <p id="console"></p>
 
-        <button id="restart-btn">Restart</button>
+        <button type="button" id="restart-btn">Restart</button>
     </body>
 </html>
