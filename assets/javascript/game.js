@@ -14,10 +14,12 @@ $(document).ready(function() {
                 enemy.takeDamage(this.counterAttack);
             } else {
                 enemy.takeDamage(this.attackPower);
-                enemy.attack(this, true);
                 $("#console").text("You attacked " + enemy.elem.children(".name").text() + " for " + this.attackPower + ". \r\n");
-                $("#console").text($("#console").text() + enemy.elem.children(".name").text() + " attacked you for " + enemy.counterAttack + ".");
                 this.attackPower += this.baseAttack;
+                if (enemy.hp >= 1) {
+                    enemy.attack(this, true);
+                    $("#console").text($("#console").text() + enemy.elem.children(".name").text() + " attacked you for " + enemy.counterAttack + ".");
+                }
             }
         }
 
@@ -47,10 +49,10 @@ $(document).ready(function() {
         }
     }
 
-    characters.push(new Character($("#neo"), 100, 6, 8));
-    characters.push(new Character($("#trinity"), 125, 5, 9));
-    characters.push(new Character($("#morpheus"), 150, 4, 10));
-    characters.push(new Character($("#mr-smith"), 175, 3, 11));
+    characters.push(new Character($("#neo"), 100, 16, 5));
+    characters.push(new Character($("#trinity"), 120, 8, 10));
+    characters.push(new Character($("#morpheus"), 150, 6, 20));
+    characters.push(new Character($("#mr-smith"), 180, 4, 25));
 
     $(".character").on("click", function(event) {
         var target = event.currentTarget;
