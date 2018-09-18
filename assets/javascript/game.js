@@ -51,4 +51,18 @@ $(document).ready(function() {
     characters.push(new Character($("#trinity"), 125, 5, 9));
     characters.push(new Character($("#morpheus"), 150, 4, 10));
     characters.push(new Character($("#mr-smith"), 175, 3, 11));
+
+    $(".character").on("click", function(event) {
+        var target = event.currentTarget;
+        var parent = event.currentTarget.parentElement;
+        if (parent === $("#char-choice")[0]) {
+            $("#player-char").append(target)
+            $(target).addClass("hero");
+            $("#available-enemies").append($("#char-choice").children());
+        } else if (parent === $("#available-enemies")[0] && $("#defending-char").children().length === 0) {
+            $(target).addClass("enemy")
+            $("#defending-char").append(target);
+        }
+    });
+
 });
