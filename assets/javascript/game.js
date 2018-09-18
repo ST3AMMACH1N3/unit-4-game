@@ -81,4 +81,12 @@ $(document).ready(function() {
         player.attack(enemy);
     });
 
+    $("#restart-btn").on("click", function() {
+        for(var i  = 0; i < characters.length; i++) {
+            characters[i].reset();
+        }
+        $("#restart-btn").css("display", "none");
+        $("#console").text(" ");
+    });
+
 });
