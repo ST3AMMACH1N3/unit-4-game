@@ -65,4 +65,20 @@ $(document).ready(function() {
         }
     });
 
+    $("#attack-btn").on("click", function() {
+        if ($("#defending-char").children().length === 0 || $("#player-char").children().length === 0) {
+            return;
+        }
+        var player;
+        var enemy;
+        for(var i = 0; i < characters.length; i++) {
+            if ($("#player-char").children()[0] === characters[i].elem[0]) {
+                player = characters[i];
+            } else if ($("#defending-char").children()[0] === characters[i].elem[0]) {
+                enemy = characters[i];
+            }
+        }
+        player.attack(enemy);
+    });
+
 });
