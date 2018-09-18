@@ -21,6 +21,23 @@ $(document).ready(function() {
             }
         }
 
+        this.die = function() {
+            if (this.elem[0] === $("#player-char").children()[0]) {
+                $("#restart-btn").css("display", "block");
+            }
+            this.elem.detach();
+        }
+
+        this.reset = function() {
+            this.hp = this.maxHP;
+            this.attackPower = this.baseAttack;
+            this.elem.removeClass("hero");
+            this.elem.removeClass("enemy");
+            this.elem.children(".hp").text(this.hp);
+            this.elem.detach();
+            $("#char-choice").append(this.elem);
+        }
+
         this.takeDamage = function(damage) {
             this.hp -= damage;
             this.elem.children(".hp").text(this.hp);
