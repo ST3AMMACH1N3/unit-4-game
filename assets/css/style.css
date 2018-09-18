@@ -46,15 +46,18 @@ img {
 }
 
 #console {
-    display: none;
+    /* display: none; */
     font-size: 16px;
+    line-height: 2em;
     color: #5acf5a;
     margin: 5px auto 5px 0px;
     background: #000000aa;
     padding: 5px;
+    white-space: pre;
 }
 
 #restart-btn {
+    margin: 5px 0px;
     display: none;
 }
 
