@@ -24,7 +24,7 @@ $(document).ready(function() {
         }
 
         this.die = function() {
-            if (this.elem[0] === $("#player-char").children()[0]) {
+            if (this.elem[0] === $("#player-char").children()[0] || (this.elem[0] === $("#defending-char").children()[0] && $("#available-enemies").children().length === 0)) {
                 $("#restart-btn").css("display", "block");
             }
             this.elem.detach();
